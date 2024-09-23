@@ -19,12 +19,12 @@ export default async function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] item-center justify-items-center min-h-screen p-6 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1 className="text-2xl font-bold mb-4 ">News Articles</h1>
+        <h1 className="bg-[#b09f79] shadow-lg p-4 w-full text-zinc-800 text-left rounded-lg font-happy-monkey text-3xl md:text-3xl font-bold leading-tight tracking-wide">News Articles</h1>
 
         <ul clsssName="space-y-4">
           {data?.map((article)=> (
             <li key ={article.id} className="my-4">
-              <Card>
+              <Card className="bg-[#b09f79]">
             <CardHeader>
               <CardTitle>
                     <Link href={article.Link} target="_blank" className="hover:underline text-justify">
@@ -33,11 +33,11 @@ export default async function Home() {
               </CardTitle>
               </CardHeader>
               <CardContent className="flex gap-2">
-                <p>{article.tag_1}</p>
+                <p className="border-solid border-2 border-[#476074] rounded-2xl p-2">{article.tag_1}</p>
                 <Separator orientation="vertical"/>
-                <p>{article.tag_2}</p>
+                <p className="border-solid border-2 border-[#476074] rounded-2xl p-2">{article.tag_2}</p>
                 <Separator orientation="vertical" />
-                <p>{article.tag_3}</p>
+                <p className="border-solid border-2 border-[#476074] rounded-2xl p-2">{article.tag_3}</p>
               </CardContent>
           </Card>
             </li>
